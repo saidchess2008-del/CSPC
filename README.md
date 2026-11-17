@@ -43,3 +43,13 @@ Differentiation acts as a high-pass filter that amplifies high-frequency measure
 
 ### Effect of Integration Back
 Integrating acceleration back up to position suppresses and averages out the random measurement noise, successfully recovering the smooth trajectory close to the original coordinates[cite: 2].
+
+## PW2 Lab B: Optimization in Chemistry
+
+### Results Summary
+* **Three Optimization Methods (Part 2):** 
+  * On the simple convex function ($f(x) = (x-3)^2 + 1$), gradient descent, Newton's method, and SLSQP all successfully converge to $x \approx 3$[cite: 10].
+  * On the complex landscape ($g(x) = x^4 - 3x^2 + x + 5$), the starting point ($x_0=0$ vs $x_0=2$) significantly alters which local/global minimum or stationary point the algorithm converges to[cite: 10]. Newton's method can land on maxima if curvature $g''(x) < 0$[cite: 10].
+* **Reaction Kinetics (Part 3):** Fitted rate constant $k \approx 0.26$, successfully reproducing the decay curve matching `kinetics.csv`[cite: 10].
+* **Chemical Equilibrium (Part 4):** Both Newton root-finding and SLSQP yield equilibrium extent $x \approx 0.67$, giving equilibrium amounts: $[H_2] \approx 0.33$ mol, $[I_2] \approx 0.33$ mol, and $[HI] \approx 1.33$ mol[cite: 10].
+* **Titration Equivalence Point (Part 5):** The maximum slope of the titration curve ($\mathrm{dpH}/\mathrm{dV}$) accurately locates the equivalence point at approximately $50\text{ mL}$[cite: 12].
